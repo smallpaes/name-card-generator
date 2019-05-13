@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Create Your Name Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+  <!--Form Section-->
+  <section class="form-input">
+    <div class="form-container rounded mt-4">
+      <h1 class='text-center m-2'>Create your namecard</h1>
+      <form class='mt-5 needs-validation' novalidate>
+
+        <!--Name-->
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="first-name">First name</label>
+              <input type="text" class='form-control' id='first-name' placeholder='Mike' name='first-name' required>
+              <div class="invalid-feedback">
+                First name is required.
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="last-name">Last name</label>
+              <input type="text" class='form-control' id='last-name' placeholder='Huang' name='last-name' required>
+              <div class="invalid-feedback">
+                Last name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Photo Link-->
+        <div class="form-group">
+          <label for="photo-link">Link to your photo</label>
+          <input type="url" class='form-control' id='photo-link' name='photo-link' placeholder='https://'>
+          <div class="valid-feedback">
+            Looks fine!
+          </div>
+        </div>
+
+        <!--Introduction-->
+        <div class="form-group">
+          <label for="intro">Your introduction</label>
+          <textarea class='form-control' id="intro" cols="30" rows="3" placeholder='Describe yourself in 200 words'
+            maxlength="200" required></textarea>
+          <div class="invalid-feedback feedback">
+            Description is required.
+          </div>
+        </div>
+
+        <!--Theme Choosing-->
+        <div class="form-group">
+          <span class>Preferred theme:</span>
+          <div class="form-check mt-3 ml-4">
+            <input type="radio" id="light" name="theme" class="form-check-input" value='light-theme' required>
+            <label for="light" class='form-check-label'>Light Theme</label>
+          </div>
+          <div class="form-check mt-1 ml-4">
+            <input type="radio" name='theme' class="form-check-input" id='dark' value='dark-theme' required>
+            <label for="dark" class='form-check-label'>Dark Theme</label>
+          </div>
+          <div class="form-check mt-1 ml-4">
+            <input type="radio" name='theme' class="form-check-input" id='both' value='both-theme' required>
+            <label for="both" class='form-check-label'>I Want Both</label>
+            <div class="invalid-feedback">Please choose a theme</div>
+          </div>
+        </div>
+
+        <!--Submit Button-->
+        <button class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!--Name Card Section-->
+  <section class='name-card my-5'>
+    <!--Display name card-->
+  </section>
+  <script src="main.js"></script>
+</body>
+
+</html>
